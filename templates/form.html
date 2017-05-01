@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Super Sprinter 3000 - Add new Story</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h1>User Story manager - Add new Story</h1>
+    <form>
+
+    <p>Story Title</p>
+        <input name="story_title" type="text" value="{{ story_title }}">
+
+    <p>User Story</p>
+        <textarea name="user_story" cols="50" rows="5">{{ user_story }}</textarea>
+
+    <p>Acceptance criteria</p>
+        <textarea name="acceptance_criteria" cols="50" rows="5">{{ acceptance_criteria }}</textarea>
+
+    <p>Business Value</p>
+        <input name="business_value" type="number" min="100" max="1500" step="100" value="{{ business_value }}">
+
+    <p>Estimation (h)</p>
+        <input name="estimation" type="number" min="0.5" max="40" step="0.5" value="{{ estimation }}">
+
+    <p>Status</p>
+    <select name="status_list">
+        <option value="planning">Planning</option>
+        <option value="todo">TODO</option>
+        <option value="in_progress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+    </select>
+
+    <input type="submit" value="create" formmethod="POST" formaction="/new_story">
+
+    </form>
+</body>
+
+</html>

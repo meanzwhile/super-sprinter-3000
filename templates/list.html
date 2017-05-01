@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Super Sprinter 3000</title>
+<style>
+    table {
+        background-color:powderblue;
+        color:black;
+        padding: 5px;
+        margin: 10px
+    }
+</style>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <th>{{ table[0][0] }}</th>
+            <th>{{ table[0][1] }}</th>
+            <th>{{ table[0][2] }}</th>
+            <th>{{ table[0][3] }}</th>
+            <th>{{ table[0][4] }}</th>
+            <th>{{ table[0][5] }}</th>
+            <th>{{ table[0][6] }}</th>
+        </tr>
+        {% for row in table[1:] %}
+        <tr>
+            {% for item in row[:-1] %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
